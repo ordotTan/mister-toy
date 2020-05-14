@@ -23,7 +23,7 @@ export default class ToyFilter extends React.Component {
 
     render() {
         return (
-            <section className="toy-filter fs20">
+            <section className="toy-filter flex justify-center fs20">
                 <SearchIcon style={{ color:'blue',fontSize: 25 }}/>
                 <label>
                     Toy Name
