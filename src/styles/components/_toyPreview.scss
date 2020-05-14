@@ -1,0 +1,21 @@
+.toy-item {
+    border: 1px solid black;
+    margin: 10px;
+    background-color:lighten($clr4,30);
+    border-radius: 15px;
+    padding: 10px;
+    width:250px;
+    .toy-name {
+        text-transform: capitalize;
+    }
+    .toy-content {
+        text-align: center;
+    }
+    img.toy-thumb {
+        width:80px;
+    }
+  
+}
+
+
+

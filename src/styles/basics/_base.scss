@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: BalsamiqSans-Regular;
+    color: $clr2;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    color: $clr1;
+}
+
+h2 {
+    color: $clr2;
+}
+
+canvas {
+    margin-bottom: 10px;
+}

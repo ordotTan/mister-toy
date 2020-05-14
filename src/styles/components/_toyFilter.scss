@@ -1,0 +1,25 @@
+.toy-filter {
+    border: 1px solid black;
+    margin: 12px;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgba($clr3,0.5);
+    margin-bottom: 20px;
+    label {
+        font-size: 20px;
+        margin-right: 10px;
+        color: $clr1;
+    }
+    input {
+        font-size: 15px;
+        padding-left:10px;
+        margin-left: 10px;
+    }
+    select {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+}
+
+
+
