@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SearchIcon from '@material-ui/icons/Search';
 
 export default class ToyFilter extends React.Component {
 
@@ -24,7 +24,7 @@ export default class ToyFilter extends React.Component {
     render() {
         return (
             <section className="toy-filter fs20">
-                <h2>Filter</h2>
+                <SearchIcon style={{ color:'blue',fontSize: 25 }}/>
                 <label>
                     Toy Name
                         <input type="text" name="name" placeholder="Toy Name" value={this.state.name} onChange={this.handleChange} />

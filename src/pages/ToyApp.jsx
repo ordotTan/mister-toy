@@ -36,8 +36,6 @@ class ToyApp extends React.Component {
         return (
             <section className="toy-app">
                 <ToyFilter onSetFilter={this.onSetFilter} />
-                <Link className="add-toy-link" to="/toy/edit">Add Toy</Link>
-                <Link to="/toy/stats">Store Statistics</Link>
                 {isLoading && <h2>Loading...</h2>}
                 {!isLoading && toys &&  <ToyList onDeleteToy={this.onDeleteToy} toys={this.props.toys} />}
             </section>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { loadToy } from '../store/actions/toyActions.js'
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 class ToyDetails extends React.Component {
   componentDidMount() {
@@ -19,7 +18,6 @@ class ToyDetails extends React.Component {
       <h2>Category: {toy.type}</h2>
       <img src={imgSRC} alt=""></img>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident optio unde ipsa aliquid eos distinctio quam rem. Itaque sed, harum distinctio veniam soluta ipsa quisquam, exercitationem animi culpa, nesciunt similique!</p>
-      <Link to="/">Toy list</Link>
     </div>;
   }
 }
