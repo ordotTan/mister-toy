@@ -3,6 +3,7 @@ import ToyApp from './pages/ToyApp'
 import ToyEdit from './pages/ToyEdit'
 import ToyDetails from './pages/ToyDetails'
 import ToyStats from './pages/ToyStats'
+import About from './pages/About'
 import AppHeader from './cmps/AppHeader'
 // import PopUp from './cmps/PopUp'
 
@@ -20,10 +21,11 @@ class App extends React.Component {
                 <AppHeader />
                 {/* <PopUp/> */}
                 <Switch>
-                    <Route component={ToyStats} path="/toy/stats" />
-                    <Route component={ToyEdit} path="/toy/edit/:id?" />
-                    <Route component={ToyDetails} path="/toy/:id" />
-                    <Route component={ToyApp} exact path="/" />
+                    <Route exact component={ToyStats} path="/toy/stats" />
+                    <Route exact component={ToyEdit} path="/toy/edit/:id?" />
+                    <Route exact component={ToyDetails} path="/toy/:id" />
+                    <Route exact component={About} path="/about" />
+                    <Route exact component={ToyApp} exact path="/" />
                 </Switch>
             </section>
         )

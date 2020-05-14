@@ -4,7 +4,6 @@ import toyService from '../services/toyService.js';
 import { saveToy } from '../store/actions/toyActions.js';
 import axios from 'axios'
 
-import { Link } from "react-router-dom";
 
 import { connect } from "react-redux";
 
@@ -116,7 +115,7 @@ class ToyEdit extends React.Component {
                                 <option value="false">No</option>
                             </select>
                             <label>Choose file </label>
-                            <input
+                            <input className="file-input"
                                 onChange={(ev) => this.OnUploadImg(ev)}
                                 type="file"
                             // name="imgURL"
@@ -133,7 +132,6 @@ class ToyEdit extends React.Component {
                     }
 
                 </Formik>
-                <Link to="/">Toy list</Link>
             </>
         )
     }

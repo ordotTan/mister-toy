@@ -2,7 +2,6 @@ import { loadToys } from '../store/actions/toyActions.js'
 import React, { Component } from 'react'
 import { Pie } from 'react-chartjs-2';
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 
 class ToyStats extends Component {
@@ -60,7 +59,6 @@ class ToyStats extends Component {
             <div>
                 <h2>Toys Per Category</h2>
                 <Pie data={data} />
-                <Link to="/">Toy list</Link>
             </div>
         )
     }
