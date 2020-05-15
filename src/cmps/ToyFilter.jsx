@@ -1,6 +1,4 @@
 import React from 'react';
-import SearchIcon from '@material-ui/icons/Search';
-
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -19,6 +17,7 @@ export default class ToyFilter extends React.Component {
         }
     }
 
+
     handleChange = (ev) => {
         let { name, value } = ev.target;
         value = ev.target.type === 'number' ? parseInt(value) : value;
@@ -31,9 +30,8 @@ export default class ToyFilter extends React.Component {
     render() {
         return (
             <section className="toy-filter flex justify-center fs20">
-                <SearchIcon style={{ color: 'blue', fontSize: 25 }} />
-                <TextField id="standard-basic" label="Toy Name" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                <FormControl variant="outlined">
+                <TextField  className="my-select" id="standard-basic" label="Toy Name" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                <FormControl>
                     <InputLabel>Cateogry</InputLabel>
                     <Select
                         className="my-select"
@@ -50,7 +48,7 @@ export default class ToyFilter extends React.Component {
                         <MenuItem value="Adult">Adult</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl variant="outlined">
+                <FormControl>
                     <InputLabel>In Stock</InputLabel>
                     <Select
                         className="my-select"
@@ -63,10 +61,10 @@ export default class ToyFilter extends React.Component {
                             <em>All</em>
                         </MenuItem>
                         <MenuItem value="true">Yes</MenuItem>
-                        <MenuItem value="flase">No</MenuItem>
+                        <MenuItem value="false">No</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl variant="outlined">
+                <FormControl>
                     <InputLabel>Sort By</InputLabel>
                     <Select
                         className="my-select"
