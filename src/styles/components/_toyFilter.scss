@@ -10,11 +10,16 @@
     }
     input {
         font-size: 15px;
-        padding-left:10px;
+        padding-left:3px;
         margin-left: 10px;
     }
     select {
         font-size: 15px;
+        margin-left: 10px;
+    }
+    .my-select {
+        width: 130px;
+        height: 50px;
         margin-left: 10px;
     }
 }

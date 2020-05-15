@@ -1,6 +1,13 @@
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
+
+
 export default class ToyFilter extends React.Component {
 
     state = {
@@ -8,7 +15,7 @@ export default class ToyFilter extends React.Component {
             name: '',
             type: '',
             inStock: '',
-            sort: ''
+            sort: 'name'
         }
     }
 
@@ -24,37 +31,54 @@ export default class ToyFilter extends React.Component {
     render() {
         return (
             <section className="toy-filter flex justify-center fs20">
-                <SearchIcon style={{ color:'blue',fontSize: 25 }}/>
-                <label>
-                    Toy Name
-                        <input type="text" name="name" placeholder="Toy Name" value={this.state.name} onChange={this.handleChange} />
-
-                </label>
-                <label>
-                    Toy Type
-                    <select name="type" value={this.state.type} onChange={this.handleChange}>
-                        <option value="">All</option>
-                        <option value="Funny">Funny</option>
-                        <option value="Educational">Educational</option>
-                        <option value="Adult">Adult</option>
-                    </select>
-                </label>
-                <label>
-                    In Stock
-                    <select name="inStock" value={this.state.inStock} onChange={this.handleChange}>
-                        <option value="">All</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </label>
-                <label>
-                    Sort By
-                    <select name="sort" value={this.state.sort} onChange={this.handleChange}>
-                        <option defaultValue value="name">Name</option>
-                        <option value="price">Price</option>
-                    </select>
-                </label>
-
+                <SearchIcon style={{ color: 'blue', fontSize: 25 }} />
+                <TextField id="standard-basic" label="Toy Name" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                <FormControl variant="outlined">
+                    <InputLabel>Cateogry</InputLabel>
+                    <Select
+                        className="my-select"
+                        name="type"
+                        value={this.state.type}
+                        onChange={this.handleChange}
+                        label="Cateogry"
+                    >
+                        <MenuItem value="">
+                            <em>All</em>
+                        </MenuItem>
+                        <MenuItem value="Funny">Funny</MenuItem>
+                        <MenuItem value="Educational">Educational</MenuItem>
+                        <MenuItem value="Adult">Adult</MenuItem>
+                    </Select>
+                </FormControl>
+                <FormControl variant="outlined">
+                    <InputLabel>In Stock</InputLabel>
+                    <Select
+                        className="my-select"
+                        name="inStock"
+                        value={this.state.inStock}
+                        onChange={this.handleChange}
+                        label="In Stock"
+                    >
+                        <MenuItem value="">
+                            <em>All</em>
+                        </MenuItem>
+                        <MenuItem value="true">Yes</MenuItem>
+                        <MenuItem value="flase">No</MenuItem>
+                    </Select>
+                </FormControl>
+                <FormControl variant="outlined">
+                    <InputLabel>Sort By</InputLabel>
+                    <Select
+                        className="my-select"
+                        name="sort"
+                        value={this.state.sort}
+                        onChange={this.handleChange}
+                        label="Sort By"
+                    >
+                        <MenuItem value="name">Name</MenuItem>
+                        <MenuItem value="price">Price</MenuItem>
+                    </Select>
+                </FormControl>
             </section>
         )
 

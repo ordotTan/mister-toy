@@ -17,7 +17,7 @@ export default class About extends Component {
             name = 'Tel Aviv'
         }
         if (city === 'london') {
-            loc = { lat: 51.5074, lng: 0.1278 }
+            loc = { lat: 51.5074, lng: -0.1278 }
             name = 'London'
         }
         if (city === 'tokyo') {
