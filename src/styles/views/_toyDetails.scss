@@ -1,3 +1,10 @@
 img {
     width: 150px;
 } 
+
+.share-icon {
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+}
